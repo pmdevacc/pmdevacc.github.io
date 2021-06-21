@@ -3,100 +3,149 @@
 <head>
 <meta charset="utf-8">
 <title>deeplink</title>
-<link rel="stylesheet" href="https://unpkg.com/mvp.css">
+<style>
+:root{--border-radius:5px;--box-shadow:2px 2px 10px;--color:#118bee;--color-accent:#118bee15;--color-bg:#fff;--color-bg-secondary:#e9e9e9;--color-secondary:#920de9;--color-secondary-accent:#920de90b;--color-shadow:#f4f4f4;--color-text:#000;--color-text-secondary:#999;--font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;--hover-brightness:1.2;--justify-important:center;--justify-normal:left;--line-height:1.5;--width-card:285px;--width-card-medium:460px;--width-card-wide:800px;--width-content:1080px}article aside{background:var(--color-secondary-accent);border-left:4px solid var(--color-secondary);padding:.01rem .8rem}body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-family);line-height:var(--line-height);margin:0;overflow-x:hidden;padding:0}footer,header,main{margin:0 auto;max-width:var(--width-content);padding:3rem 1rem}hr{background-color:var(--color-bg-secondary);border:none;height:1px;margin:4rem 0;width:100%}section{display:flex;flex-wrap:wrap;justify-content:var(--justify-important)}article img,section img{max-width:100%}section pre{overflow:auto}section aside{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);margin:1rem;padding:1.25rem;width:var(--width-card)}section aside:hover{box-shadow:var(--box-shadow) var(--color-bg-secondary)}[hidden]{display:none}article header,div header,main header{padding-top:0}header{text-align:var(--justify-important)}header a b,header a em,header a i,header a strong{margin-left:.5rem;margin-right:.5rem}header nav img{margin:1rem 0}section header{padding-top:0;width:100%}nav{align-items:center;display:flex;font-weight:700;justify-content:space-between;margin-bottom:7rem}nav ul{list-style:none;padding:0}nav ul li{display:inline-block;margin:0 .5rem;position:relative;text-align:left}nav ul li:hover ul{display:block}nav ul li ul{background:var(--color-bg);border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:none;height:auto;left:-2px;padding:.5rem 1rem;position:absolute;top:1.7rem;white-space:nowrap;width:auto;z-index:1}nav ul li ul::before{content:"";position:absolute;left:0;right:0;top:-.5rem;height:.5rem}nav ul li ul li,nav ul li ul li a{display:block}code,samp{background-color:var(--color-accent);border-radius:var(--border-radius);color:var(--color-text);display:inline-block;margin:0 .1rem;padding:0 .5rem}details{margin:1.3rem 0}details summary{font-weight:700;cursor:pointer}h1,h2,h3,h4,h5,h6{line-height:var(--line-height)}mark{padding:.1rem}ol li,ul li{padding:.2rem 0}p{margin:.75rem 0;padding:0}pre{margin:1rem 0;max-width:var(--width-card-wide);padding:1rem 0}pre code,pre samp{display:block;max-width:var(--width-card-wide);padding:.5rem 2rem;white-space:pre-wrap}small{color:var(--color-text-secondary)}sup{background-color:var(--color-secondary);border-radius:var(--border-radius);color:var(--color-bg);font-size:xx-small;font-weight:700;margin:.2rem;padding:.2rem .3rem;position:relative;top:-2px}a{color:var(--color);display:inline-block;font-weight:700;text-decoration:none}a:hover{filter:brightness(var(--hover-brightness));text-decoration:underline}a b,a em,a i,a strong,button{border-radius:var(--border-radius);display:inline-block;font-size:medium;font-weight:700;line-height:var(--line-height);margin:.5rem 0;padding:1rem 2rem}button{font-family:var(--font-family)}button:hover{cursor:pointer;filter:brightness(var(--hover-brightness))}a b,a strong,button{background-color:var(--color);border:2px solid var(--color);color:var(--color-bg)}a em,a i{border:2px solid var(--color);border-radius:var(--border-radius);color:var(--color);display:inline-block;padding:1rem 2rem}article aside a{color:var(--color-secondary)}figure{margin:0;padding:0}figure img{max-width:100%}figure figcaption{color:var(--color-text-secondary)}button:disabled,input:disabled{background:var(--color-bg-secondary);border-color:var(--color-bg-secondary);color:var(--color-text-secondary);cursor:not-allowed}button[disabled]:hover{filter:none}form{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:block;max-width:var(--width-card-wide);min-width:var(--width-card);padding:1.5rem;text-align:var(--justify-normal)}form header{margin:1.5rem 0;padding:1.5rem 0}input,label,select,textarea{display:block;font-size:inherit;max-width:var(--width-card-wide)}input[type=checkbox],input[type=radio]{display:inline-block}input[type=checkbox]+label,input[type=radio]+label{display:inline-block;font-weight:400;position:relative;top:1px}input,select,textarea{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);margin-bottom:1rem;padding:.4rem .8rem}input[readonly],textarea[readonly]{background-color:var(--color-bg-secondary)}label{font-weight:700;margin-bottom:.2rem}table{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);border-spacing:0;display:inline-block;max-width:100%;overflow-x:auto;padding:0;white-space:nowrap}table td,table th,table tr{padding:.4rem .8rem;text-align:var(--justify-important)}table thead{background-color:var(--color);border-collapse:collapse;border-radius:var(--border-radius);color:var(--color-bg);margin:0;padding:0}table thead th:first-child{border-top-left-radius:var(--border-radius)}table thead th:last-child{border-top-right-radius:var(--border-radius)}table thead th:first-child,table tr td:first-child{text-align:var(--justify-normal)}table tr:nth-child(even){background-color:var(--color-accent)}blockquote{display:block;font-size:x-large;line-height:var(--line-height);margin:1rem auto;max-width:var(--width-card-medium);padding:1.5rem 1rem;text-align:var(--justify-important)}blockquote footer{color:var(--color-text-secondary);display:block;font-size:small;line-height:var(--line-height);padding:1.5rem 0}
+</style>
 </head>
 <body>
 
-	<h1>Auchan DeepLinks</h1>
+<h1>Auchan DeepLinks</h1>
 
-	<p><a href="qa.auchan.ecommerce://recover_password?token=t0k3n">Recover Password</a>
-	<p><a href="qa.auchan.ecommerce://account_activation?success=true">Account Activation TRUE</a>
-	<p><a href="qa.auchan.ecommerce://account_activation?success=false">Account Activation FALSE</a>
+<p><a href="qa.auchan.ecommerce://recover_password?token=t0k3n">Recover Password</a>
+<p><a href="qa.auchan.ecommerce://account_activation?success=true">Account Activation TRUE</a>
+<p><a href="qa.auchan.ecommerce://account_activation?success=false">Account Activation FALSE</a>
 
-	<hr />
+<hr />
 
-	<h1>Telpark DeepLinks</h1>
+<h1>Telpark DeepLinks</h1>
 
-	<h2>Navegações</h2>
+<h2>Open Telpark / Vazio / Sem deeplink para testar abrir app simples</h2>
+<p>
+	<a href="telparkci://"><i>CI</a>
+	<a href="telparkpre://"><i>PRE</a>
+	<a href="telpark://"><i>PROD</a>
 
-	<p><a href="telparkci://">CI - Open Telpark</a>
-	<p><a href="telparkpre://">PRE - Open Telpark</a>
-	<p><a href="telpark://">PROD - Open Telpark</a>
-
-	<h3>Faqs</h3>
-
-	<p><a href="telparkci://faqs">CI - Contacto</a>
-	<p><a href="telparkpre://faqs">PRE - Contacto</a>
-	<p><a href="telpark://faqs">PROD - Contacto</a>
-		
-	<h3>Abonos</h3>
-
-	<p><a href="telparkci://subscriptions">CI - Abonos</a>
-	<p><a href="telparkpre://subscriptions">PRE - Abonos</a>
-	<p><a href="telpark://subscriptions">PROD - Abonos</a>
-		
-	<h3>Mais Opções</h3>
-
-	<p><a href="telparkci://moreoptions">CI - Mais Opções</a>
-	<p><a href="telparkpre://moreoptions">PRE - Mais Opções</a>
-	<p><a href="telpark://moreoptions">PROD - Mais Opções</a>
-		
-	<h3>Veículo Elétrico</h3>
-
-	<p><a href="telparkci://electric_vehicle">CI - Veículo Elétrico</a>
-	<p><a href="telparkpre://electric_vehicle">PRE - Veículo Elétrico</a>
-	<p><a href="telpark://electric_vehicle">PROD - Veículo Elétrico</a>
-		
-	<h2>Ações</h2>
+<h3>Deeplink não existente (para testes)</h3>
+<p>
+	<a href="telparkci://xpto"><i>CI</a>
+	<a href="telparkpre://xpto"><i>PRE</a>
+	<a href="telpark://xpto"><i>PROD</a>
 	
-	<h3>Parking Meter</h3>
+<h3>Payment Method</h3>
+<p>
+	<a href="telparkci://payment"><i>CI</a>
+	<a href="telparkpre://payment"><i>PRE</a>
+	<a href="telpark://payment"><i>PROD</a>
 
-	<p><a href="telparkpre://parkingmetersetup">PRE - Parking Meter Setup Parking Session</a>
-	<p><a href="telparkpre://parkingmeterextend/25711892">PRE - Parking Meter Extend Parking Session [Might be expired]</a>
+<h3>Entrada Express</h3>
+<p>
+	<a href="telparkci://entradaexpress"><i>CI</a>
+	<a href="telparkpre://entradaexpress"><i>PRE</a>
+	<a href="telpark://entradaexpress"><i>PROD</a>
 
-	<h3>Prebooks</h3>
-
-	<p><a href="telparkci://bookings">CI - Prebooking</a>
-	<p><a href="telparkpre://bookings">PRE - Prebooking</a>
-	<p><a href="telpark://bookings">PROD - Prebooking</a>		
-		
-	<h3>Prebooks --> Park Berna</h3>
-
-	<p><a href="telparkci://bookings/846">CI - Prebooking in Berna</a>
-	<p><a href="telparkpre://bookings/846">PRE - Prebooking in Berna</a>
-	<p><a href="telpark://bookings/846">PROD - Prebooking in Berna</a>
-
-	<h3>Express Entry</h3>
-
-	<p><a href="telparkci://entradaexpress">CI - Express Entry</a>
-	<p><a href="telparkpre://entradaexpress">PRE - Express Entry</a>
-	<p><a href="telpark://entradaexpress">PROD - Express Entry</a>
-
-	<h3>Android 4.1.2 - Express Entry</h3>
-
-	<p><a href="telparkci://expressEntry">CI - [Android 4.1.2] Express Entry</a>
-	<p><a href="telparkpre://expressEntry">PRE - [Android 4.1.2] Express Entry</a>
-	<p><a href="telpark://expressEntry">PROD - [Android 4.1.2] Express Entry</a>
-
-	<h3>Payment Method</h3>
-
-	<p><a href="telparkci://payment">CI - Payment Method</a>
-	<p><a href="telparkpre://payment">PRE - Payment Method</a>
-	<p><a href="telpark://payment">PROD - Payment Method</a>
-
-	<h3>Deeplink não existente (para testes)</h3>
-
-	<p><a href="telparkci://xpto">CI - Deeplink não existente</a>
-	<p><a href="telparkpre://xpto">PRE - Deeplink não existente</a>
-	<p><a href="telparkpre://login">PRE - try login</a>
-	<p><a href="telpark://xpto">PROD - Deeplink não existente</a>
-		
-	<h1>Dynamic Links</h1>
-	<p><a href="https://telpark.page.link?&link=https%3A%2F%2Ftelpark.com%2Fsubscriptions&apn=com.delaware.empark&afl=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3F%26id%3Dcom.delaware.empark%26utm_campaign%3D%26utm_medium%3Demail%26utm_source%3Dmail&ibi=com.delaware.Telpark&ifl=https://apps.apple.com/es/app/telpark/id658204860&si=https://zpdw8wnskw14uv0g1y1y9138-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/telpark_banner.png&utm_campaign=&utm_medium=email&utm_source=mail&ofl=https%3A%2F%2Fpromotion.telpark.com%2Fdescuento%3F%26utm_campaign%3D%26utm_medium%3Demail%26utm_source%3Dmail">PROD - Promo Abonos</a></p>
+<h3>Parking Meter</h3>
+<p>
+	<a href="telparkci://parkingmetersetup"><i>CI</a>
+	<a href="telparkpre://parkingmetersetup"><i>PRE</a>
+	<a href="telpark://parkingmetersetup"><i>PROD</a>		
 	
-	<h1>Install with UTM Links</h1>  
+
+<h3>Prebooks</h3>
+<p>
+	<a href="telparkci://bookings"><i>CI</a>
+	<a href="telparkpre://bookings"><i>PRE</a>
+	<a href="telpark://bookings"><i>PROD</a>		
 	
-	<p><a href="https://play.google.com/store/apps/details?id=com.delaware.empark&hl=es&utm_source=telparkdebug&utm_medium=web&utm_campaign=nondigital&utm_content=link">Play Store Link #1 https://play.google.com/store/apps/details?id=com.delaware.empark&hl=es&utm_source=telparkdebug&utm_medium=web&utm_campaign=nondigital&utm_content=link</a></p>
-  	<p><a href="https://play.google.com/store/apps/details?id=com.delaware.empark&referrer=utm_source%3Dtelpark%26utm_medium%3Dweb%26utm_term%3Dtestterm%26utm_content%3Dtestcontent%26utm_campaign%3Dtestcampaign">Play Store Link #2 https://play.google.com/store/apps/details?id=com.delaware.empark&referrer=utm_source%3Dtelpark%26utm_medium%3Dweb%26utm_term%3Dtestterm%26utm_content%3Dtestcontent%26utm_campaign%3Dtestcampaign</a></p>
+<h3>Prebooks --> Park Berna</h3>
+<p>
+	<a href="telparkci://bookings/846"><i>CI</a>
+	<a href="telparkpre://bookings/846"><i>PRE</a>
+	<a href="telpark://bookings/846"><i>PROD</a>
+
+<h3>Faqs</h3>
+<p>
+	<a href="telparkci://faqs"><i>CI</a>
+	<a href="telparkpre://faqs"><i>PRE</a>
+	<a href="telpark://faqs"><i>PROD</a>
+	
+<h3>More Options</h3>
+<p>
+	<a href="telparkci://moreoptions"><i>CI</a>
+	<a href="telparkpre://moreoptions"><i>PRE</a>
+	<a href="telpark://moreoptions"><i>PROD</a>
+	
+<h3>Veículo Elétrico</h3>
+<p>
+	<a href="telparkci://electric_vehicle"><i>CI</a>
+	<a href="telparkpre://electric_vehicle"><i>PRE</a>
+	<a href="telpark://electric_vehicle"><i>PROD</a>
+	
+<h3>Abonos</h3>
+<p>
+	<a href="telparkci://subscriptions"><i>CI</a>
+	<a href="telparkpre://subscriptions"><i>PRE</a>
+	<a href="telpark://subscriptions"><i>PROD</a>
+	
+<h3>Abonos - Comprar</h3>
+<p>
+	<a href="telparkci://subscriptions/buy"><i>CI</a>
+	<a href="telparkpre://subscriptions/buy"><i>PRE</a>
+	<a href="telpark://subscriptions/buy"><i>PROD</a>
+	
+<h3>Abonos - Associar</h3>
+<p>
+	<a href="telparkci://subscriptions/add"><i>CI</a>
+	<a href="telparkpre://subscriptions/add"><i>PRE</a>
+	<a href="telpark://subscriptions/add"><i>PROD</a>
+	
+<h3>Localizar Parques</h3>
+<p>
+	<a href="telparkci://parks"><i>CI</a>
+	<a href="telparkpre://parks"><i>PRE</a>
+	<a href="telpark://parks"><i>PROD</a>
+	
+<h3>Localizar Parques - Latitude/Longitude (centro Porto)</h3>
+<p>
+	<a href="telparkci://parks/map/41.14961,-8.61099"><i>CI</a>
+	<a href="telparkpre://parks/map/41.14961,-8.61099"><i>PRE</a>
+	<a href="telpark://parks/map/41.14961,-8.61099"><i>PROD</a>
+	
+<h3>Localizar Parques - Berna</h3>
+<p>
+	<a href="telparkci://parks/open/846"><i>CI</a>
+	<a href="telparkpre://parks/open/846"><i>PRE</a>
+	<a href="telpark://parks/open/846"><i>PROD</a>
+	
+<h3>Histórico</h3>
+<p>
+	<a href="telparkci://history"><i>CI</a>
+	<a href="telparkpre://history"><i>PRE</a>
+	<a href="telpark://history"><i>PROD</a>
+	
+<h3>Plazas Livres</h3>
+<p>
+	<a href="telparkci://freeplaces"><i>CI</a>
+	<a href="telparkpre://freeplaces"><i>PRE</a>
+	<a href="telpark://freeplaces"><i>PROD</a>
+	
+<h3>Aerportos</h3>
+<p>
+	<a href="telparkci://airports"><i>CI</a>
+	<a href="telparkpre://airports"><i>PRE</a>
+	<a href="telpark://airports"><i>PROD</a>
+	
+<h3>Promoção específica (#8) 30% desconto em parques</h3>
+<p>
+	<a href="telparkci://promotion/8"><i>CI</a>
+	<a href="telparkpre://promotion/8"><i>PRE</a>
+	<a href="telpark://promotion/8"><i>PROD</a>
+
+<h1>Dynamic Links</h1>
+<p><a href="https://telpark.page.link?&link=https%3A%2F%2Ftelpark.com%2Fsubscriptions&apn=com.delaware.empark&afl=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3F%26id%3Dcom.delaware.empark%26utm_campaign%3D%26utm_medium%3Demail%26utm_source%3Dmail&ibi=com.delaware.Telpark&ifl=https://apps.apple.com/es/app/telpark/id658204860&si=https://zpdw8wnskw14uv0g1y1y9138-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/telpark_banner.png&utm_campaign=&utm_medium=email&utm_source=mail&ofl=https%3A%2F%2Fpromotion.telpark.com%2Fdescuento%3F%26utm_campaign%3D%26utm_medium%3Demail%26utm_source%3Dmail">PROD - Promo Abonos</a></p>
+
+<h1>Install with UTM Links</h1>  
+
+<p><a href="https://play.google.com/store/apps/details?id=com.delaware.empark&hl=es&utm_source=telparkdebug&utm_medium=web&utm_campaign=nondigital&utm_content=link">Play Store Link #1 https://play.google.com/store/apps/details?id=com.delaware.empark&hl=es&utm_source=telparkdebug&utm_medium=web&utm_campaign=nondigital&utm_content=link</a></p>
+	<p><a href="https://play.google.com/store/apps/details?id=com.delaware.empark&referrer=utm_source%3Dtelpark%26utm_medium%3Dweb%26utm_term%3Dtestterm%26utm_content%3Dtestcontent%26utm_campaign%3Dtestcampaign">Play Store Link #2 https://play.google.com/store/apps/details?id=com.delaware.empark&referrer=utm_source%3Dtelpark%26utm_medium%3Dweb%26utm_term%3Dtestterm%26utm_content%3Dtestcontent%26utm_campaign%3Dtestcampaign</a></p>
 </body>
 </html>
